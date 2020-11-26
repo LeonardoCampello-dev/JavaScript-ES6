@@ -43,7 +43,7 @@ O JavaScript avança muito rápido, já os navegadores são um pouco lentos para
 - [x] Import/Export
 - [x] Async/Await
 
-## 🚀 Instalando Node & Yarn
+<h2 align="center">🚀 Instalando Node & Yarn</h2>
 
 Antes de começar os estudos, vamos precisar de duas ferramentas muito importantes, só com elas vamos conseguir instalar as dependências de nossos projetos.
 
@@ -67,7 +67,7 @@ yarn -v
 ## Este comando precisa retornar com a versão instalada do Yarn
 ```
 
-## 🚀 Configurando o Babel
+<h2 align="center">🚀 Configurando o Babel</h2>
 
 Primeiramente você vai criar um projeto, dentro da pasta **execute o seguinte comando:**
 
@@ -137,11 +137,84 @@ Depois de salvarmos o arquivo, **vamos executar o seguinte comando no terminal:*
 yarn dev
 ```
 
-### E finalmente, você irá reparar o novo arquivo **bundle.js**, seu conteúdo será o código do **main.js** convertido para versões mais antigas do JavaScript.
+E finalmente, você irá reparar o novo arquivo **bundle.js**, seu conteúdo será o código do **main.js** convertido para versões mais antigas do JavaScript.
 
+<h2 align="center">🚀 Classes</h2>
 
+Antigamente não era possível usar classes em JavaScript, hoje você pode usar tranquilamente.
 
+**Agora vamos ver exemplos do uso de classes:**
 
+<h2 align="center">
+    <img 
+        src="./.github/class.png" 
+        alt="classes"
+        width="500"
+    >
+</h2>
 
+No código acima declaramos uma classe chamada ``TodoList`` e definimos dois métodos. 
 
+O primeiro método é o ``constructor()`` ele vai ser o primeiro método executado toda vez que um objeto for instanciado a partir da classe. E no nosso constructor estamos iniciando a variável ``todos`` que recebe um array vazio inicialmente.
 
+O segundo método se chama ``addTodo()`` e nele estamos adicionando um novo item ao array criado no constructor.
+
+Após isso, nos vamos instanciar essa classe na variável ``myList``, usando a palavra chave ``new``
+
+E por último estamos pegando um botão de nosso HTML e adicionando uma função de clique. Toda vez que clicamos no botão será chamado o método ``myList.addTodo()`` 
+
+### Herança
+
+<h2 align="center">
+    <img 
+        src="./.github/class-extends.png" 
+        alt="classes"
+        width="500"
+    >
+</h2>
+
+No código acima criamos uma nova classe chamada ``List`` e adicionamos métodos com a mesma função do exemplo anterior.
+
+Agora na classe ``TodoList`` nós estamos extendendo os métodos e propriedades da classe ``List`` usando a palavra chave ``extends``
+
+Nós teremos o mesmo funcionamento de antes, a diferença é que estamos herdendo propriedades de outra classe.
+
+**Agora vamos supor que nós queiramos adicionar mais informações na classe que herdou a outra, por exemplo um nome de usuário.**
+
+<h2 align="center">
+    <img 
+        src="./.github/class-super.png" 
+        alt="classes"
+        width="500"
+    >
+</h2>
+
+Para chamar o constructor da classe pai e criar novas propriedades nós usamos o método ``super()``
+
+### Métodos estáticos
+
+Com os métodos estáticos, nós não precisamos usar o ``new`` para chamar algum método da classe.
+
+<h2 align="center">
+    <img 
+        src="./.github/class-static-error.png" 
+        alt="classes"
+        width="500"
+    >
+</h2>
+
+No código acima um erro seria retornado, quando definimos um método estático **ele não tem acesso ao restante da classe**, então ele não vai enxergar o ``this.todos``
+
+Normalmente usamos este tipo de método para passar uma informação e ele retornar outra, independente do restante da classe.
+
+<h2 align="center">
+    <img 
+        src="./.github/class-static.png" 
+        alt="classes"
+        width="500"
+    >
+</h2>
+
+No código acima criamos uma classe chamada ``Math`` com o método ``sum`` que basicamente pega dois valores e retorna a soma.
+
+Após isso chamamos o método passando os dois valores e ele nos retorna a soma. Você pode reparar que não precisamos instanciar nenhum objeto pois o método é estático.

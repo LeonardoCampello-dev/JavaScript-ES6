@@ -251,3 +251,77 @@ Se você programa o JavaScript básico, provavelmente conhece a palavra-chave ``
 No código acima, temos um exemplo de uso deste tipo de variável. Podemos perceber que diferente da ``const`` ela pode ter seu valor reatribuído.
 
 Como dito ``let`` é uma variável de escopo, a cada abertura e fechamento de chaves consideramos um escopo. Ou seja como a variável ``y`` está dentro do escopo da função, se tentarmos dar um ``console.log(y)`` fora da função, nós **não vamos conseguir acessar o valor**.
+
+<h2 align="center">🚀 Operações em Vetores</h2>
+
+Antigamente se você quisesse manipular vetores ou realizar ações em cada item do vetor era necessário o uso do ``for`` ou até de bibliotecas de terceiros.
+
+Com o ES6 temos várias novas funcionalidades para manipulação de vetores, vamos ver algumas abaixo:
+
+### Map
+
+A função do ``map`` é percorrer um vetor e executar uma ação escolhida em cada item.
+
+<h2 align="center">
+    <img 
+        src="./.github/array-map.png" 
+        width="500"
+    >
+</h2>
+
+No código acima temos um vetor de números e vamos criar um novo vetor chamado ``newArr``, com o uso do map.
+
+O ``map`` é uma função que recebe como parâmetro outra função e nesta mesma recebemos **cada item** do vetor. Na nossa função estamos pegando os itens, somando com seus índices e retornando o resultado.
+
+**O resultado seria:** ``[1, 4, 6, 8, 12, 14]``
+
+### Reduce
+
+O ``reduce`` é uma forma de nós consumirmos todo nosso vetor e transformar em uma única informação.
+
+<h2 align="center">
+    <img 
+        src="./.github/array-reduce.png" 
+        width="500"
+    >
+</h2>
+
+No código acima estamos realizado a soma de todos itens do vetor.
+
+Na função dentro do ``reduce`` estamos recebendo o total e o próximo valor **(next)**, então cada vez que a função for executada ele vai pegar o valor do retorno e colocar no total da próxima função.
+
+Na primeira vez que a função for executada o ``total`` vai ser 0 e ``next`` vai ser 1. Na segunda execução o ``total`` vai ser 1 e o ``next`` vai ser 3. E assim por diante, até realizar todas somas e retornar o resultado.
+
+**O resultado seria:** ``30``
+
+### Filter
+
+O ``filter`` serve basicamente para filtrar itens de um vetor.
+
+<h2 align="center">
+    <img 
+        src="./.github/array-filter.png" 
+        width="500"
+    >
+</h2>
+
+No código acima estamos pegando todos números pares do vetor.
+
+Para cada item estamos verificando se o resto da sua divisão por 2 é igual a 0, ou seja, se ele é par. Essa condição tem que retornar ``true`` ou ``false``, se o resultado for ``true`` este item será incluído no novo vetor.
+
+### Find
+
+O ``find`` é utilizado quando desejamos verificar se existe uma informação dentro do vetor.
+
+<h2 align="center">
+    <img 
+        src="./.github/array-find.png" 
+        width="500"
+    >
+</h2>
+
+No código acima estamos verificando se existe o número 9 dentro do vetor.
+
+Se o ``find`` conseguir encontrar o número, ele vai retornar exatamente o número, caso contrário ele vai retornar **undefined**.
+
+

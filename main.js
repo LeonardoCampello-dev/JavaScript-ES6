@@ -1,7 +1,5 @@
-const arr = [1, 3, 4, 5, 8, 9]
+const test = item => {
+    return 'test'
+}
 
-const find = arr.find(function(item) {
-    return item === 9
-})
-
-console.log(find)
+console.log(test)

@@ -329,3 +329,42 @@ No código acima estamos verificando se existe o número 9 dentro do vetor.
 Se o ``find`` conseguir encontrar o número, ele vai retornar exatamente o número, caso contrário ele vai retornar **undefined**.
 
 
+<h2 align="center">🚀 Arrow Functions</h2>
+
+É uma nova forma de criar funções. Esta nova forma tem uma estrutura reduzida quando comparada a sintaxe de uma função comum.
+
+**Veja o exemplo abaixo:**
+
+<h2 align="center">
+    <img 
+        src="./.github/arrow-functions-one.png" 
+        width="500"
+    >
+</h2>
+
+O melhor lugar para usar uma ``arrow function`` é em funções anônimas. **Veja como utilizar:** 
+
+- Primeiro: Remova a palavra-chave ``function``
+- Segundo: Entre os parênteses e as chaves adicione um sinal de igual junto com um sinal de maior ``=>`` como se fosse uma flecha.
+
+<h2 align="center">
+    <img 
+        src="./.github/arrow-functions-two.png" 
+        width="500"
+    >
+</h2>
+
+Quando a função recebe apenas um parâmetro, nós podemos remover os parênteses que envolvem o parâmetro.
+
+<h2 align="center">
+    <img 
+        src="./.github/arrow-functions-three.png" 
+        width="500"
+    >
+</h2>
+
+Ainda podemos reduzir mais um pouco. Quando nossa função retorna simplesmente uma informação e não várias linhas, nós podemos omitir a palavra-chave ``return`` e também remover as chaves.
+
+Veja como o código se tornou menos verboso.
+
+

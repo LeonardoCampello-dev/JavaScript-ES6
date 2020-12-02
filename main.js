@@ -1,3 +1,6 @@
-const test = () => ({ name: 'Leonardo' })
+function sum(x = 5, y = 9) {
+    return x + y
+}
 
-console.log(test())
+console.log(sum(1))
+console.log(sum())

@@ -393,4 +393,38 @@ Isso acontece devido o uso de chaves ``{ }`` elas servem para criar objetos mas 
 
 **OBS:** *Arrow functions não podem ser usadas como construtores e lançarão um erro quando usadas com o ``new``*
 
+<h2 align="center">
+    <a 
+        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos"
+    > 🚀 Valores padrão
+    </a>
+</h2>
 
+A inserção de valores padrão para parâmetros de funções é uma das funcionalidades mais úteis do ES6. Funciona tanto para funções comuns, quanto para arrow functions. **Veja os exemplos abaixo:**
+
+<h2 align="center">
+    <img 
+        src="./.github/default-value-error.png" 
+        width="500"
+    >
+</h2>
+
+No código acima as duas execuções da função retornariam ``NaN`` isso significa que a função não conseguiu identificar os valores que devem ser somados. Na primeira execução apenas passamos o parâmetro ``x`` e na segunda execução não informamos nenhum parâmetro.
+
+<h2 align="center">
+    <img 
+        src="./.github/default-value.png" 
+        width="500"
+    >
+</h2>
+
+Nesse caso as funções seriam executadas sem problema algum, pois definimos valores padrão para os parâmetros. A primeira execução retornaria ``10`` e a segunda ``14``
+
+<h2 align="center">
+    <img 
+        src="./.github/default-value-arrow.png" 
+        width="500"
+    >
+</h2>
+
+Aqui estamos criando exatamente a mesma função, utilizando os mesmos valores. A única diferença é que construímos no formato de arrow function.

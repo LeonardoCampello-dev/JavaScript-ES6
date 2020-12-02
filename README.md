@@ -428,3 +428,54 @@ Nesse caso as funções seriam executadas sem problema algum, pois definimos val
 </h2>
 
 Aqui estamos criando exatamente a mesma função, utilizando os mesmos valores. A única diferença é que construímos no formato de arrow function.
+
+<h2 align="center">
+    <a 
+        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao"
+    > 🚀 Desestruturação
+    </a>
+</h2>
+
+Vamos falar um pouco sobre desestruturação de objetos no JavaScript, **veja os exemplos abaixo:**
+
+<h2 align="center">
+    <img 
+        src="./.github/disruption-error.png" 
+        width="500"
+    >
+</h2>
+
+Provavelmente você faria da maneira acima para pegar o nome e cidade do usuário. Porém temos uma forma de fazer a mesma coisa com um código mais limpo.
+
+<h2 align="center">
+    <img 
+        src="./.github/disruption-one.png" 
+        width="500"
+    >
+</h2>
+
+No código acima estamos usando o conceito de desestruturação de objetos, você pode perceber que pegamos o nome e idade do usuário utilizando apenas uma linha. 
+
+É muito simples utilizar este conceito. Primeiramente você deve abrir um objeto do lado esquerdo do igual e dentro dele informar o nome das propriedades que vai buscar do usuário, por fim basta passar o nome do objeto depois do igual.
+
+<h2 align="center">
+    <img 
+        src="./.github/disruption-two.png" 
+        width="500"
+    >
+</h2>
+
+E se eu quiser desestruturar a cidade do endereço? 
+
+Neste caso você deve passar o nome da propriedade, no caso ``endereço``, em seguida acrescentar dois pontos e abrir um novo objeto passando quais informações do endereço deseja buscar.
+
+<h2 align="center">
+    <img 
+        src="./.github/disruption-function.png" 
+        width="500"
+    >
+</h2>
+
+A desestruturação pode ser usada em vários outros locais, no exemplo acima estamos utilizando em uma função.
+
+Neste caso temos uma função que mostra o nome do usuário, quando chamamos esta função estamos passando o objeto ``user`` inteiro. Então podemos desestruturar o nome do usuário no próprio parâmetro da função. O código vai executar sem problemas.

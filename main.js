@@ -1,6 +1,14 @@
-function sum(x = 5, y = 9) {
-    return x + y
+const user = {
+    name: 'Leonardo',
+    age: 20,
+    address: {
+        state: 'RS',
+        city: 'Novo Hamburgo'
+    }
 }
 
-console.log(sum(1))
-console.log(sum())
+function showName({ name }) {
+    console.log(name)
+}
+
+showName(user)

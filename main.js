@@ -1,5 +1,3 @@
-const test = item => {
-    return 'test'
-}
+const test = () => ({ name: 'Leonardo' })
 
-console.log(test)
+console.log(test())

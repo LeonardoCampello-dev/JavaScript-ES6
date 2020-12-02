@@ -371,4 +371,26 @@ Ainda podemos reduzir mais um pouco. Quando nossa função retorna simplesmente 
 
 Veja como o código se tornou menos verboso.
 
+<h2 align="center">
+    <img 
+        src="./.github/arrow-const.png" 
+        width="500"
+    >
+</h2>
+
+No código acima estamos criando uma função utilizando uma constante. É possível, porém não é uma forma recomendada para criar funções.
+
+<h2 align="center">
+    <img 
+        src="./.github/arrow-object.png" 
+        width="500"
+    >
+</h2>
+
+Devemos prestar atenção em um detalhe. Podemos retornar um vetor, número e string diretamente após a "flecha", mas um objeto não, se tentarmos retornar um objeto diretamente o resultado será ``undefined``
+
+Isso acontece devido o uso de chaves ``{ }`` elas servem para criar objetos mas também servem para definir o corpo da função. Então a maneira adequada de retornar um objeto diretamente é envolvendo o mesmo entre parênteses.
+
+**OBS:** *Arrow functions não podem ser usadas como construtores e lançarão um erro quando usadas com o ``new``*
+
 

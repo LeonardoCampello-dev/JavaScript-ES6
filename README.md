@@ -49,6 +49,9 @@
 - [🚀 Arrow Functions](#-arrow-functions)
 - [🚀 Valores padrão](#-valores-padrão)
 - [🚀 Desestruturação](#-desestruturação)
+- [🚀 Operadores Rest/Spread](#-operadores-restspread)
+  - [Rest](#rest)
+  - [Spread](#spread)
 - [📜 Licença](#-licença)
 
 ---
@@ -501,6 +504,104 @@ Neste caso você deve passar o nome da propriedade, no caso ``endereço``, em se
 A desestruturação pode ser usada em vários outros locais, no exemplo acima estamos utilizando em uma função.
 
 Neste caso temos uma função que mostra o nome do usuário, quando chamamos esta função estamos passando o objeto ``user`` inteiro. Então podemos desestruturar o nome do usuário no próprio parâmetro da função. O código vai executar sem problemas.
+
+## 🚀 [Operadores Rest/Spread](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+Estes são operadores que são conhecidos por usar três pontos, um ao lado do outro.
+
+Mas antes de utilizá-los nós precisamos instalar um novo pacote em nosso projeto, pois os operadores **rest/spread** ainda não foram acoplados na versão principal do Babel, vamos instalar em formato de plugin.
+
+**Execute o seguinte comando para instalar o pacote:**
+
+```
+yarn add @babel/plugin-proposal-object-rest-spread
+```
+
+O próximo passo é abrir o arquivo **.babelrc** na raíz do nosso projeto e criar um novo array de ``plugins``, passando o plugin instalado. **Veja abaixo o resultado:**
+
+<h2 align="center">
+    <img 
+        src="./.github/babel-plugins.png" 
+        width="500"
+    >
+</h2>
+
+### Rest
+
+O **rest** serve para pegar o resto das propriedades. O que seria esse resto? Vamos ver no exemplo abaixo.
+
+<h2 align="center">
+    <img 
+        src="./.github/rest-one.png" 
+        width="500"
+    >
+</h2>
+
+No código acima temos um objeto de usuário, suas propriedades são nome, idade e trabalho.
+
+Usando o conceito de desestruturação estamos pegando o nome do usuário. O restante das informações do usuário serão armazenados em outra variável, aí que entra o operador **rest**, usando três pontos e o nome da variável que desejamos armazenar as informações já conseguimos solucionar esta tarefa.
+
+O primeiro ``console.log()`` retorna o nome do usuário e o segundo um objeto com as informações restantes.
+
+<h2 align="center">
+    <img 
+        src="./.github/rest-array.png" 
+        width="500"
+    >
+</h2>
+
+Também podemos aplicar este conceito em vetores, como no exemplo acima.
+
+Estamos usando a desestruturação para pegar as duas primeiras posições do array nas variáveis ``x`` e ``y``  
+
+O resto está sendo armazenado na variável ``z`` usando o operador rest.
+
+O ``console.log()`` da variável ``z`` retorna um array com ``[3, 4]``
+
+<h2 align="center">
+    <img 
+        src="./.github/rest-function.png" 
+        width="500"
+    >
+</h2>
+
+Outra forma de utilizar o operador rest é em parâmetros de funções.
+
+No código acima temos uma função de soma que recebe vários números como parâmetro, você deve concordar comigo que seria muito trabalhoso pegar número por número e somar.
+
+Então, primeiro estamos utilizando o rest para pegar todos parâmetros e armazenar na variável ``params``, esses valores ficam em formato de array. Em seguida usamos o método ``reduce`` para manipular este array e somar todos valores, você também pode notar que estamos usando o formato de **arrow function**.
+
+O ``console.log()`` retorna **28**.
+
+### Spread
+
+Ele tem uma funcionalidade um pouco distinta do rest. Enquanto o rest pega o resto de algo, o **spread** faz o papel de propagar, ou seja, repassar as informações de um objeto ou array para outra estrutura de dados. **Veja os exemplos abaixo:**
+
+<h2 align="center">
+    <img 
+        src="./.github/spread-array.png" 
+        width="500"
+    >
+</h2>
+
+No código acima temos dois arrays. Como você faria para unir os dois? 
+
+Com o **spread** nós podemos criar um terceiro array e espalhar o conteúdo dos outros arrays dentro. Basta colocar três pontos e informar o nome do array que vai espalhar o conteúdo.
+
+O ``console.log()`` retorna ``[1, 2, 3, 4, 5, 6]``
+
+<h2 align="center">
+    <img 
+        src="./.github/spread-object.png" 
+        width="500"
+    >
+</h2>
+
+No código acima temos um objeto de usuário e queremos criar um novo objeto com as mesmas propriedades, exceto a propriedade ``name``. Para isso vamos utilizar o operador spread.
+
+Primeiro criamos um novo array com o nome de ``newUser`` e depois utilizamos os três pontos para espalhar todo conteúdo do array ``user`` nele, e por fim subscrevemos a propriedade ``name``
+
+O ``console.log()`` vai retornar um objeto com as mesmas propriedades, exceto o nome que foi alterado.
 
 ## 📜 Licença
 Realizado em 2020. Esse projeto está sob a [licença MIT](./LICENSE).

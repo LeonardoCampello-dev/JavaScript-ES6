@@ -1,14 +1,12 @@
 const user = {
     name: 'Leonardo',
     age: 20,
-    address: {
-        state: 'RS',
-        city: 'Novo Hamburgo'
-    }
+    work: 'Developer'
 }
 
-function showName({ name }) {
-    console.log(name)
+const newUser = {
+    ...user,
+    name: 'Diego'
 }
 
-showName(user)
+console.log(newUser)

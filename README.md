@@ -6,6 +6,15 @@
 </h1>
 
 <h1 align="center">
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+
+</h1>
+
+
+<h1 align="center">
     <a href="https://app.rocketseat.com.br/starter">Starter</a>
     <img 
         src="https://xesque.rocketseat.dev/platform/1566444881250.png"
@@ -13,7 +22,37 @@
     >
 </h1>
 
-## 📌 Introdução
+<h2>📌 Índice</h2>
+
+- [📖 Introdução](#-introdução)
+  - [O que significa o ES6, ES7, ES8?](#o-que-significa-o-es6-es7-es8)
+  - [Afinal o que é o ECMAScript?](#afinal-o-que-é-o-ecmascript)
+  - [Antes e depois do ES6](#antes-e-depois-do-es6)
+  - [Babel](#babel)
+  - [O que vamos ver sobre o ES6?](#o-que-vamos-ver-sobre-o-es6)
+- [🚀 Instalando Node & Yarn](#-instalando-node--yarn)
+  - [Node.js](#nodejs)
+  - [Yarn](#yarn)
+- [🚀 Configurando o Babel](#-configurando-o-babel)
+  - [Começando a configuração do Babel](#começando-a-configuração-do-babel)
+- [🚀 Classes](#-classes)
+  - [Herança](#herança)
+  - [Métodos estáticos](#métodos-estáticos)
+- [🚀 Const & Let](#-const--let)
+  - [Const](#const)
+  - [Let](#let)
+- [🚀 Operações em Vetores](#-operações-em-vetores)
+  - [Map](#map)
+  - [Reduce](#reduce)
+  - [Filter](#filter)
+  - [Find](#find)
+- [🚀 Arrow Functions](#-arrow-functions)
+- [🚀 Valores padrão](#-valores-padrão)
+- [🚀 Desestruturação](#-desestruturação)
+
+---
+
+## 📖 Introdução
 
 ### O que significa o ES6, ES7, ES8?
 
@@ -41,7 +80,7 @@ O JavaScript avança muito rápido, já os navegadores são um pouco lentos para
 - [x] Import/Export
 - [x] Async/Await
 
-<h2 align="center">🚀 Instalando Node & Yarn</h2>
+## 🚀 Instalando Node & Yarn
 
 Antes de começar os estudos, vamos precisar de duas ferramentas muito importantes, só com elas vamos conseguir instalar as dependências de nossos projetos.
 
@@ -65,7 +104,7 @@ yarn -v
 ## Este comando precisa retornar com a versão instalada do Yarn
 ```
 
-<h2 align="center">🚀 Configurando o Babel</h2>
+## 🚀 Configurando o Babel
 
 Primeiramente você vai criar um projeto, dentro da pasta **execute o seguinte comando:**
 
@@ -139,11 +178,7 @@ yarn dev
 
 E finalmente, você irá reparar o novo arquivo **bundle.js**, seu conteúdo será o código do **main.js** convertido para versões mais antigas do JavaScript.
 
-<h2 align="center">
-    <a 
-        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes"
-    >🚀 Classes </a>
-</h2>
+## [🚀 Classes](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes)
 
 Antigamente não era possível usar classes em JavaScript, hoje você pode usar tranquilamente.
 
@@ -218,7 +253,7 @@ No código acima criamos uma classe chamada ``Math`` com o método ``sum`` que b
 
 Após isso chamamos o método passando os dois valores e ele nos retorna a soma. Você pode reparar que não precisamos instanciar nenhum objeto pois o método é estático.
 
-<h2 align="center">🚀 Const & Let</h2>
+## 🚀 Const & Let
 
 Se você programa o JavaScript básico, provavelmente conhece a palavra-chave ``var`` para declarar variáveis. Porém a partir do ES6 nós temos outras duas formas de declarar uma variável, usando a palavra ``let`` ou ``const``
 
@@ -256,7 +291,7 @@ No código acima, temos um exemplo de uso deste tipo de variável. Podemos perce
 
 Como dito ``let`` é uma variável de escopo, a cada abertura e fechamento de chaves consideramos um escopo. Ou seja como a variável ``y`` está dentro do escopo da função, se tentarmos dar um ``console.log(y)`` fora da função, nós **não vamos conseguir acessar o valor**.
 
-<h2 align="center">🚀 Operações em Vetores</h2>
+## 🚀 Operações em Vetores
 
 Antigamente se você quisesse manipular vetores ou realizar ações em cada item do vetor era necessário o uso do ``for`` ou até de bibliotecas de terceiros.
 
@@ -329,11 +364,7 @@ No código acima estamos verificando se existe o número 9 dentro do vetor.
 Se o ``find`` conseguir encontrar o número, ele vai retornar exatamente o número, caso contrário ele vai retornar **undefined**.
 
 
-<h2 align="center">
-    <a 
-        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
-    > 🚀 Arrow Functions </a>
-</h2>
+## [🚀 Arrow Functions](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 É uma nova forma de criar funções. Esta nova forma tem uma estrutura reduzida quando comparada a sintaxe de uma função comum.
 
@@ -393,12 +424,7 @@ Isso acontece devido o uso de chaves ``{ }`` elas servem para criar objetos mas 
 
 **OBS:** *Arrow functions não podem ser usadas como construtores e lançarão um erro quando usadas com o ``new``*
 
-<h2 align="center">
-    <a 
-        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos"
-    > 🚀 Valores padrão
-    </a>
-</h2>
+## [🚀 Valores padrão](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos)
 
 A inserção de valores padrão para parâmetros de funções é uma das funcionalidades mais úteis do ES6. Funciona tanto para funções comuns, quanto para arrow functions. **Veja os exemplos abaixo:**
 
@@ -429,12 +455,7 @@ Nesse caso as funções seriam executadas sem problema algum, pois definimos val
 
 Aqui estamos criando exatamente a mesma função, utilizando os mesmos valores. A única diferença é que construímos no formato de arrow function.
 
-<h2 align="center">
-    <a 
-        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao"
-    > 🚀 Desestruturação
-    </a>
-</h2>
+## [🚀 Desestruturação](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao)
 
 Vamos falar um pouco sobre desestruturação de objetos no JavaScript, **veja os exemplos abaixo:**
 

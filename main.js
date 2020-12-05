@@ -1,12 +1,5 @@
-const user = {
-    name: 'Leonardo',
-    age: 20,
-    work: 'Developer'
-}
+const name = 'Leonardo'
+const age = 20
 
-const newUser = {
-    ...user,
-    name: 'Diego'
-}
-
-console.log(newUser)
+// console.log('Meu nome é' + name + ' e tenho' + idade + ' anos')
+console.log(`Meu nome é ${name} e tenho ${age} anos`)

@@ -52,6 +52,7 @@
 - [🚀 Operadores Rest/Spread](#-operadores-restspread)
   - [Rest](#rest)
   - [Spread](#spread)
+- [🚀 Template Literals](#-template-literals)
 - [📜 Licença](#-licença)
 
 ---
@@ -602,6 +603,32 @@ No código acima temos um objeto de usuário e queremos criar um novo objeto com
 Primeiro criamos um novo array com o nome de ``newUser`` e depois utilizamos os três pontos para espalhar todo conteúdo do array ``user`` nele, e por fim subscrevemos a propriedade ``name``
 
 O ``console.log()`` vai retornar um objeto com as mesmas propriedades, exceto o nome que foi alterado.
+
+## 🚀 [Template Literals](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings)
+
+Template Literals é uma nova forma de incluir variáveis dentro de strings. **Veja os exemplos abaixo:**
+
+<h2 align="center">
+    <img 
+        src="./.github/concat.png" 
+        width="500"
+    >
+</h2>
+
+Provavelmente você faria da forma acima para unir variáveis com strings, mas veja como é trabalhoso fazer muitas concatenações e além disso a sintaxe do código fica de certa forma "feia".
+
+Agora vamos ver um exemplo utilizando template literals.
+
+<h2 align="center">
+    <img 
+        src="./.github/template-strings.png" 
+        width="500"
+    >
+</h2>
+
+É muito simples de utilizar, no lugar das aspas simples ou duplas nós vamos utilizar o sinal de crase e quando quisermos incluir uma variável, primeiro vamos incluir o sinal de dólar e depois vamos abrir e fechar chaves, basta incluir o nome da variável entre as chaves.
+
+Você pode ver que o código ficou muito mais limpo e vai funcionar da mesma forma.
 
 ## 📜 Licença
 Realizado em 2020. Esse projeto está sob a [licença MIT](./LICENSE).

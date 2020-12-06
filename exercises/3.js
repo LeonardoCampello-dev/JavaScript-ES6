@@ -23,7 +23,7 @@ console.log('==========================================================')
 const name = 'Leonardo'
 const age = 20
 
-const showUser = (name = 'Diego', age = 23) => 
+const showUser = (name = 'Diego', age = 23) =>
     console.log(`Name: ${name} \nAge: ${age}`)
 
 showUser()

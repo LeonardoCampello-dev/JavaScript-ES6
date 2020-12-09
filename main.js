@@ -1,8 +1,3 @@
-const name = 'Leonardo'
-const age = 20
+import { sum } from './functions'
 
-const user = {
-    name,
-    age,
-    work: 'developer'
-}
+console.log(sum(1, 3))

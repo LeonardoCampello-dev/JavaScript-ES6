@@ -54,6 +54,7 @@
   - [Spread](#spread)
 - [🚀 Template Literals](#-template-literals)
 - [🚀 Object Short Syntax](#-object-short-syntax)
+- [🚀 Configurando Webpack](#-configurando-webpack)
 - [📜 Licença](#-licença)
 
 ---
@@ -125,7 +126,7 @@ Após rodar este comando, será criado um arquivo chamado **package.json** na ra
 O próximo passo é instalar as primeiras dependências do nosso projeto, **execute o seguinte comando usando o yarn:**
 
 ``` bash
-yarn add @babel/cli @babel/preset-env @babel/core
+yarn add @babel/cli @babel/preset-env @babel/core -D
 
 ## Assim serão instaladas as dependências, fique tranquilo, isso pode demorar um pouco.
 ```
@@ -516,7 +517,7 @@ Mas antes de utilizá-los nós precisamos instalar um novo pacote em nosso proje
 **Execute o seguinte comando para instalar o pacote:**
 
 ```
-yarn add @babel/plugin-proposal-object-rest-spread
+yarn add @babel/plugin-proposal-object-rest-spread -D
 ```
 
 O próximo passo é abrir o arquivo **.babelrc** na raíz do nosso projeto e criar um novo array de ``plugins``, passando o plugin instalado. **Veja abaixo o resultado:**
@@ -654,6 +655,94 @@ Veja que no objeto colocamos os nomes das propriedades repetindo o nome das vari
 </h2>
 
 Quando o nome da propriedade é igual o nome da variável dentro de um objeto, nós podemos deixar apenas um deles, como no exemplo acima.
+
+## 🚀 [Configurando Webpack](https://webpack.js.org/)
+
+O **webpack** é um serviço que disponibiliza uma forma de trabalhar com vários arquivos **.js** na aplicação. E todo esse código ainda vai ser convertido em único arquivo **bundle.js**
+
+Para começar a configurar o webpack, **primeiro vamos instalar duas dependências:** 
+
+```bash
+yarn add webpack webpack-cli -D
+```
+
+Agora vamos criar o arquivo de configuração do webpack, seu nome vai ser **webpack.config.js**, este sempre vai ser o arquivo principal de configuração.
+
+Dentro deste arquivo vamos ter uma sintaxe um pouco diferente, **veja o exemplo abaixo:**
+
+<h2 align="center">
+    <img 
+        src="./.github/webpack-config.png" 
+        width="600"
+    >
+</h2>
+
+> Por enquanto você não precisa se preocupar em entender a sintaxe do ``module.exports``
+
+- [x] ``entry`` nosso arquivo principal da aplicação.
+- [x] ``output`` configuração que diz para qual lugar e arquivo enviar o código convertido para antes do ES6.
+  - [x] ``path`` caminho onde vai estar o arquivo, neste caso ``__dirname`` é o diretório onde se encontra o **webpack.config.js**, ou seja, na raíz do projeto.
+  - [x] ``filename`` nome do arquivo. 
+- [x] ``module`` configuração com propriedade obrigatória chamada ``rules`` que vai dizer como o webpack deve se comportar quando o usuário estiver tentando importar novos arquivos .js
+
+Vamos supor que você está trabalhando no seu **main.js**, provavelmente não vai conseguir colocar todo código da aplicação neste arquivo, pelo menos este não é o ideal. Então você vai precisar lidar com vários arquivos. No webpack dentro das ``rules`` vamos configurar baseado na extensão do arquivo, qual **loader** ele vai ter que utilizar, no nosso caso é o **Babel.** 
+
+  - [x] ``test`` propriedade onde vamos criar uma expressão regular para buscar arquivos .js
+  - [x] ``exclude`` propriedade onde vamos excluir a pasta **node_modules**, pois não queremos que o Babel execute nenhum arquivo .js dentro desta pasta.
+  - [x] ``use`` configuração com propriedade chamada ``loader`` e aqui colocamos qual loader vamos usar.
+
+Agora precisamos instalar o loader, **digite o seguinte código no seu terminal:**
+
+```bash
+yarn add babel-loader@8.0.0-beta -D
+```
+
+Pronto, webpack configurado, agora vamos executá-lo, no arquivo **package.json** vamos definir o comando de execução.
+
+<h2 align="center">
+    <img 
+        src="./.github/webpack-execute.png" 
+        width="500"
+    >
+</h2>
+
+No lugar do script que rodava o Babel, vamos inserir o script do webpack.
+
+- [x] ``--mode=development`` significa que vai executar o webpack em modo de desenvolvimento.
+- [x] ``-w`` significa que vai ficar monitorando as alterações no arquivo main.js
+
+Agora basta rodar o seguinte comando no seu terminal: 
+
+```bash
+yarn dev
+```
+
+Se tudo funcionou corretamente, agora vamos testar de fato. Crie um novo arquivo chamado **functions.js** e insira o seguinte código: 
+
+<h2 align="center">
+    <img 
+        src="./.github/webpack-export.png" 
+        width="500"
+    >
+</h2>
+
+Faça algumas alterações também no **main.js** 
+
+<h2 align="center">
+    <img 
+        src="./.github/webpack-import.png" 
+        width="500"
+    >
+</h2>
+
+Não se preocupe com a sintaxe ``import && export``, estamos usando apenas para teste e vamos aprender sobre na próxima aula. 
+
+Se no seu console retornou o resultado, significa que já conseguimos importar e exportar arquivos, graças ao webpack.
+
+
+
+
+
 
 ## 📜 Licença
 Realizado em 2020. Esse projeto está sob a [licença MIT](./LICENSE).

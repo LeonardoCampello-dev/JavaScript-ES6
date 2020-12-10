@@ -57,7 +57,8 @@
 - [🚀 Configurando Webpack](#-configurando-webpack)
 - [🚀 Import/Export](#-importexport)
   - [Export default](#export-default)
-- [Import all](#import-all)
+  - [Import all](#import-all)
+- [🚀 Webpack dev server](#-webpack-dev-server)
 - [📜 Licença](#-licença)
 
 ---
@@ -815,7 +816,7 @@ Outra coisa importante para saber é que podemos ter no mesmo arquivo um export 
     >
 </h2>
 
-## Import all
+### Import all
 
 Agora vamos supor que um arquivo tenha vários exports, seria trabalhoso importar cada função em uma variável, então nós podemos armazenar todas funções em um único objeto, **veja como fazer:**
 
@@ -827,6 +828,9 @@ Agora vamos supor que um arquivo tenha vários exports, seria trabalhoso importa
 </h2>
 
 Basicamente você irá inserir um ``*`` que significa todas funções do arquivo e depois nomear o objeto onde vai armazenar elas.
+
+## 🚀 [Webpack dev server](https://webpack.js.org/configuration/dev-server/)
+
 
 ## 📜 Licença
 Realizado em 2020. Esse projeto está sob a [licença MIT](./LICENSE).

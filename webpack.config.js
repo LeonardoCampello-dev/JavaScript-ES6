@@ -1,13 +1,16 @@
 module.exports = {
-    entry: './main.js', // O entry é nosso arquivo principal
-    output: { // Lugar onde será enviado o código convertido
-        path: __dirname, // Caminho (raíz)
-        filename: 'bundle.js', // Nome do arquivo
+    entry: './src/main.js',
+    output: {
+        path: __dirname + '/public',
+        filename: 'bundle.js',
+    },
+    devServer: {
+        contentBase: __dirname + '/public'
     },
     module: {
         rules: [
             {
-                test: /\.js$/, // Buscar arquivos .js 
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'

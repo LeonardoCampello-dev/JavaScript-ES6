@@ -1,11 +1,4 @@
 <h1 align="center">
-    <img 
-        src="https://scontent.fpoa1-1.fna.fbcdn.net/v/t1.0-9/117305017_723271011552709_7969369902008808369_o.png?_nc_cat=108&ccb=2&_nc_sid=e3f864&_nc_ohc=xuBOzPhI1x4AX_QSS-K&_nc_ht=scontent.fpoa1-1.fna&oh=cb9bc809b1fd6b7f420f6ccf8e99046e&oe=5FE54E91"
-        width="800"
-    >
-</h1>
-
-<h1 align="center">
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
@@ -13,6 +6,12 @@
 
 </h1>
 
+<h1 align="center">
+    <img 
+        src="https://scontent.fpoa1-1.fna.fbcdn.net/v/t1.0-9/117305017_723271011552709_7969369902008808369_o.png?_nc_cat=108&ccb=2&_nc_sid=e3f864&_nc_ohc=xuBOzPhI1x4AX_QSS-K&_nc_ht=scontent.fpoa1-1.fna&oh=cb9bc809b1fd6b7f420f6ccf8e99046e&oe=5FE54E91"
+        width="800"
+    >
+</h1>
 
 <h1 align="center">
     <a href="https://app.rocketseat.com.br/starter">Starter</a>
@@ -21,6 +20,8 @@
         width="40"
     >
 </h1>
+
+> **O projeto não vai poder ser finalizado, infelizmente o curso de ES6 foi removido do site da Rocketseat.**
 
 <h2>📌 Índice</h2>
 
@@ -58,7 +59,6 @@
 - [🚀 Import/Export](#-importexport)
   - [Export default](#export-default)
   - [Import all](#import-all)
-- [🚀 Webpack dev server](#-webpack-dev-server)
 - [📜 Licença](#-licença)
 
 ---
@@ -829,10 +829,6 @@ Agora vamos supor que um arquivo tenha vários exports, seria trabalhoso importa
 
 Basicamente você irá inserir um ``*`` que significa todas funções do arquivo e depois nomear o objeto onde vai armazenar elas.
 
-## 🚀 [Webpack dev server](https://webpack.js.org/configuration/dev-server/)
-
-
 ## 📜 Licença
-Realizado em 2020. Esse projeto está sob a [licença MIT](./LICENSE).
 
 Feito com 💚 por [Leonardo Campello](https://br.linkedin.com/in/leonardo-campello-6151a71a5)
